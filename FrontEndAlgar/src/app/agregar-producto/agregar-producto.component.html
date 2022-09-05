@@ -1,0 +1,31 @@
+<div class="row mt-5">
+
+    <h3>Agregar Producto</h3>
+    <p>Llenar todos los campos a continuación:</p>
+    <form class="requires-validation" [formGroup]="formProducto" >
+
+        <div class="col-md-12">
+            <input class="form-control"  formControlName="nombre" type="text" name="name" placeholder="Ingrese el nombre del producto" required>
+        </div>
+        <br>
+        <div class="col-md-12">
+            <input class="form-control"  formControlName="monto" type="number" name="name" placeholder="Ingrese el monto" required>
+        </div>
+        <br>
+        <div class="col-md-12">
+            <select formControlName="color"  class="form-control"   [(ngModel)]="selectedColor" required>
+                <option [value]="null">Seleccione un Color:</option>
+                <option [value]="3">Rojo</option>
+                <option [value]="4">Negro</option>
+                <option [value]="5">Blanco</option>
+              </select>
+        </div>
+
+   
+
+
+        <div class="form-button mt-3">
+            <button id="submit" type="submit" (click)="guardar()" class="btn btn-primary">Guardar</button>
+        </div>
+    </form>
+</div>
